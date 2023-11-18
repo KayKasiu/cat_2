@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Author Details</title>
-<link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <h1>Author Details Form</h1>
-  <form action="submit_author.php" method="post">
+  <form action="processes/AutRegistration.php" method="POST">
     <label for="authorId">Author ID (PK):</label>
     <input type="text" id="authorId" name="authorId" required><br><br>
     
