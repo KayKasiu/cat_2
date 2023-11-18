@@ -29,6 +29,17 @@ try {
         th {
             background-color: #f2f2f2;
         }
+        .btn {
+            padding: 6px 12px;
+            text-decoration: none;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        .btn-delete {
+            background-color: #f44336;
+        }
     </style>
 </head>
 <body>
@@ -40,7 +51,7 @@ try {
                 <th>Full Name</th>
                 <th>Email</th>
                 <th>Address</th>
-                <!-- Add more table headers for other author details -->
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -50,10 +61,14 @@ try {
                     <td><?php echo $author['AuthorFullName']; ?></td>
                     <td><?php echo $author['AuthorEmail']; ?></td>
                     <td><?php echo $author['AuthorAddress']; ?></td>
-                    <!-- Add more table cells for other author details -->
+                    <td>
+                        <a href="editauth.php?id=<?php echo $author['AuthorId']; ?>" class="btn">Edit</a>
+                        <a href="delete_author.php?id=<?php echo $author['AuthorId']; ?>" class="btn btn-delete">Delete</a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 </body>
 </html>
+
